@@ -9,3 +9,7 @@ We will assume the following has happened in order to get started:
     - Specifically follow [Step 2](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/index.html) to install
         1. [FRC Game Tools](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/frc-game-tools.html) 
         2. [WPILib](https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html)
+
+## Examples
+   1. ### [KitBotDriveTimedExample](KitBotDriveTimedExample/README.md)
+    

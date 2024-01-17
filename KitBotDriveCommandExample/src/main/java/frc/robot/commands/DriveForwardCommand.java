@@ -4,13 +4,14 @@
 
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.RobotContainer;
 import frc.robot.subsystems.DriveTrain;
 
 public class DriveForwardCommand extends Command {
   private final DriveTrain m_driveTrain;
   private double maxTime = 0.0;
+  private Timer localTimer = new Timer();
   /** Creates a new DriveForwardCommand that will run forward for the timeLimit provided
    * 
    * @param driveTrain
@@ -26,14 +27,14 @@ public class DriveForwardCommand extends Command {
   @Override
   public void initialize() {
     /* Reset and start timer */
-    RobotContainer.m_timer.reset();
-    RobotContainer.m_timer.start();
+    localTimer.reset();
+    localTimer.start();
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    if (RobotContainer.m_timer.get() < maxTime) {
+    if (localTimer.get() < maxTime) {
       m_driveTrain.drive.arcadeDrive(0.2, 0, false);
     }
   }

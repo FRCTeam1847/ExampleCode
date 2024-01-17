@@ -7,11 +7,10 @@ package frc.robot;
 import frc.robot.Constants.OperatorConstants;
 import frc.robot.commands.DriveForwardCommand;
 import frc.robot.subsystems.DriveTrain;
-import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.button.CommandJoystick;
 
 /**
  * This class is where the bulk of the robot should be declared. Since
@@ -31,17 +30,15 @@ public class RobotContainer {
    * This is helpful when choosing a different auto for certain situations.
    */
   private final SendableChooser<Command> m_chooser = new SendableChooser<>();
-  /** 
+  /**
    * Define the commands to run.
    */
-   private final Command m_DriveFor2Sec = new DriveForwardCommand(m_DriveTrain, 2);
-   private final Command m_DriveFor3Sec = new DriveForwardCommand(m_DriveTrain, 3);
+  private final Command m_DriveFor2Sec = new DriveForwardCommand(m_DriveTrain, 2);
+  private final Command m_DriveFor3Sec = new DriveForwardCommand(m_DriveTrain, 3);
 
-  // Define timer for auto
-  public static Timer m_timer = new Timer();
 
   /** Define JoyStick. This will be the joystick plugged in to the first port. */
-  public static Joystick m_driverController = new Joystick(OperatorConstants.kDriverControllerPort);
+  public static CommandJoystick m_driverController = new CommandJoystick(OperatorConstants.kDriverControllerPort);
 
   /**
    * The container for the robot. Contains subsystems, OI devices, and commands.

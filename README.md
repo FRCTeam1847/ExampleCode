@@ -18,3 +18,7 @@ We will assume the following has happened in order to get started:
 
     1.  [KitBotDriveTimedExample](KitBotDriveTimedExample/README.md)
     2.  [KitBotDriveCommandExample](KitBotDriveCommandExample) This is the same as the first just a command based approach
+- ### Encoder Examples
+  These are examples of using a CTR encoder to run a PID Closed loop on a Talon SRX.
+    1. [EncoderTimedExample](/EncoderTimedExample)
+    2. [EncoderCommandExample](/EncoderCommandExample)
